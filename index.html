@@ -1,1 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EcoEscola</title>
 
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background: #e8f5e9;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.container{
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card{
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+button{
+    background: #43a047;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #2e7d32;
+}
+
+#dica{
+    margin-top: 10px;
+    font-weight: bold;
+    color: #1b5e20;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌱 EcoEscola</h1>
+    <p>Sustentabilidade e conscientização ambiental</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>💧 Consumo de Água</h2>
+        <p>Meta mensal: 5.000 litros</p>
+        <p>Consumo atual: 3.250 litros</p>
+    </div>
+
+    <div class="card">
+        <h2>⚡ Consumo de Energia</h2>
+        <p>Meta mensal: 800 kWh</p>
+        <p>Consumo atual: 620 kWh</p>
+    </div>
+
+    <div class="card">
+        <h2>♻️ Separação de Resíduos</h2>
+        <ul>
+            <li>🟦 Azul - Papel</li>
+            <li>🟥 Vermelho - Plástico</li>
+            <li>🟩 Verde - Vidro</li>
+            <li>🟨 Amarelo - Metal</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🌍 Dica Sustentável</h2>
+        <button onclick="mostrarDica()">Mostrar Dica</button>
+        <p id="dica"></p>
+    </div>
+
+</div>
+
+<script>
+function mostrarDica(){
+    const dicas = [
+        "Feche a torneira ao escovar os dentes.",
+        "Apague as luzes ao sair da sala.",
+        "Utilize os dois lados do papel.",
+        "Separe corretamente os materiais recicláveis.",
+        "Leve uma garrafa reutilizável para a escola."
+    ];
+
+    let sorteio = Math.floor(Math.random() * dicas.length);
+    document.getElementById("dica").innerHTML = dicas[sorteio];
+}
+</script>
+
+</body>
+</html>
