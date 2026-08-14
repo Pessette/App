@@ -1,113 +1,294 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EcoEscola</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body{
-    font-family: Arial, sans-serif;
-    background: #e8f5e9;
-    margin: 0;
-    padding: 0;
-}
+    <title>Conheça nossa escola</title>
 
-header{
-    background: #2e7d32;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.container{
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7f3;
+            color: #26352b;
+            line-height: 1.6;
+        }
 
-.card{
-    background: white;
-    padding: 20px;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
+        header {
+            background: #304b38;
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
 
-button{
-    background: #43a047;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
 
-button:hover{
-    background: #2e7d32;
-}
+        header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
 
-#dica{
-    margin-top: 10px;
-    font-weight: bold;
-    color: #1b5e20;
-}
-</style>
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 55px 25px;
+        }
+
+        .titulo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .titulo h2 {
+            font-size: 32px;
+            color: #304b38;
+            margin-bottom: 10px;
+        }
+
+        .resumo {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .resumo p {
+            margin-bottom: 15px;
+        }
+
+        .destaques {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+        }
+
+        .card h3 {
+            color: #304b38;
+            margin-bottom: 10px;
+        }
+
+        .tour {
+            background-color: #e6eee8;
+        }
+
+        .videos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .video {
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        video {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .video h3 {
+            margin-top: 12px;
+            color: #304b38;
+        }
+
+        footer {
+            background: #26352b;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 700px) {
+            header h1 {
+                font-size: 32px;
+            }
+
+            .destaques {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-    <h1>🌱 EcoEscola</h1>
-    <p>Sustentabilidade e conscientização ambiental</p>
-</header>
+    <header>
+        <h1>Colégio Estadual do Campo Castelo Branco</h1>
+        <p>Conheça um pouco mais sobre a nossa escola</p>
+    </header>
 
-<div class="container">
 
-    <div class="card">
-        <h2>💧 Consumo de Água</h2>
-        <p>Meta mensal: 5.000 litros</p>
-        <p>Consumo atual: 3.250 litros</p>
-    </div>
+    <section>
 
-    <div class="card">
-        <h2>⚡ Consumo de Energia</h2>
-        <p>Meta mensal: 800 kWh</p>
-        <p>Consumo atual: 620 kWh</p>
-    </div>
+        <div class="titulo">
+            <h2>Sobre a nossa escola</h2>
+        </div>
 
-    <div class="card">
-        <h2>♻️ Separação de Resíduos</h2>
-        <ul>
-            <li>🟦 Azul - Papel</li>
-            <li>🟥 Vermelho - Plástico</li>
-            <li>🟩 Verde - Vidro</li>
-            <li>🟨 Amarelo - Metal</li>
-        </ul>
-    </div>
+        <div class="resumo">
 
-    <div class="card">
-        <h2>🌍 Dica Sustentável</h2>
-        <button onclick="mostrarDica()">Mostrar Dica</button>
-        <p id="dica"></p>
-    </div>
+            <p>
+                O Colégio Estadual do Campo Castelo Branco é uma escola de
+                período integral, que busca oferecer aos estudantes uma formação
+                que vai além dos conteúdos trabalhados em sala de aula.
+            </p>
 
-</div>
+            <p>
+                As atividades escolares acontecem das <strong>7h20 às 11h30</strong>
+                no período da manhã e das <strong>12h55 às 17h</strong> no período
+                da tarde.
+            </p>
 
-<script>
-function mostrarDica(){
-    const dicas = [
-        "Feche a torneira ao escovar os dentes.",
-        "Apague as luzes ao sair da sala.",
-        "Utilize os dois lados do papel.",
-        "Separe corretamente os materiais recicláveis.",
-        "Leve uma garrafa reutilizável para a escola."
-    ];
+            <p>
+                Durante o dia, os estudantes também têm momentos de
+                <strong>recreio</strong>, proporcionando um tempo para descansar,
+                conversar e se divertir. Pela manhã, o recreio acontece das
+                <strong>9h às 9h15</strong> e, à tarde, das
+                <strong>15h15 às 15h30</strong>.
+            </p>
 
-    let sorteio = Math.floor(Math.random() * dicas.length);
-    document.getElementById("dica").innerHTML = dicas[sorteio];
-}
-</script>
+            <p>
+                O ensino em tempo integral contribui para uma formação mais
+                completa, oferecendo mais oportunidades de aprendizagem,
+                convivência e desenvolvimento pessoal.
+            </p>
+
+            <p>
+                Outro aspecto importante é o <strong>protagonismo dos estudantes</strong>,
+                que são incentivados a participar das atividades da escola,
+                desenvolver ideias, assumir responsabilidades e aproveitar
+                diferentes momentos de aprendizagem e convivência.
+            </p>
+
+            <p>
+                A organização das turmas também faz parte desse modelo.
+                Em determinados dias, algumas turmas do Ensino Fundamental
+                permanecem no período da tarde, enquanto em outros dias o
+                9º ano e o Ensino Médio realizam suas atividades nesse período.
+            </p>
+
+        </div>
+
+
+        <div class="destaques">
+
+            <div class="card">
+                <h3>⏰ Tempo Integral</h3>
+                <p>
+                    Mais tempo para aprender, conviver e desenvolver novas
+                    habilidades.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🌱 Protagonismo</h3>
+                <p>
+                    Os estudantes participam e fazem parte da construção
+                    da vida escolar.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🤝 Convivência</h3>
+                <p>
+                    Momentos de estudo, recreio, interação e desenvolvimento.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="tour">
+
+        <div class="titulo">
+            <h2>Tour Online</h2>
+
+            <p>
+                Conheça alguns dos espaços da nossa escola através dos vídeos.
+            </p>
+        </div>
+
+
+        <div class="videos">
+
+            <!-- VÍDEO 1 -->
+            <div class="video">
+
+                <video controls>
+                    <source src="videos/video1.mp4" type="video/mp4">
+                    Seu navegador não consegue reproduzir este vídeo.
+                </video>
+
+                <h3>Conheça nossa escola</h3>
+
+            </div>
+
+
+            <!-- VÍDEO 2 -->
+            <div class="video">
+
+                <video controls>
+                    <source src="videos/video2.mp4" type="video/mp4">
+                    Seu navegador não consegue reproduzir este vídeo.
+                </video>
+
+                <h3>Sala de Linguagens</h3>
+
+            </div>
+
+
+            <!-- VÍDEO 3 -->
+            <div class="video">
+
+                <video controls>
+                    <source src="videos/video3.mp4" type="video/mp4">
+                    Seu navegador não consegue reproduzir este vídeo.
+                </video>
+
+                <h3>Conhecendo nossos espaços</h3>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            Colégio Estadual do Campo Castelo Branco
+        </p>
+
+        <p>
+            Feira Escolar • 2026
+        </p>
+
+    </footer>
 
 </body>
 </html>
